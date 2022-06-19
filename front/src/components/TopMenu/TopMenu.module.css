@@ -1,0 +1,26 @@
+.container {
+  width: 100vw;
+  height: 60px;
+  background-color: #bdbdbd;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  direction: ltr;
+  padding: 0px 20px;
+}
+.logo {
+  font-size: 40px;
+  font-weight: 500;
+  color: darkred;
+}
+.home {
+  margin-right: 1vw;
+  margin-left: 1vw;
+  text-decoration: none;
+  color: black;
+}
+.quota {
+  margin-left: 1vw;
+  color: black;
+  text-decoration: none;
+}
