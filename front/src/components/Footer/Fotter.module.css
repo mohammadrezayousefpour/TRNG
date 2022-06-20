@@ -21,19 +21,30 @@
   text-align: justify;
   /* color: red; */
 }
-.FooterContainer div:first-child {
+#first {
   width: 40%;
   height: 100%;
 }
-.FooterContainer div:nth-child(2) {
+.second {
   width: 20%;
   height: 100%;
 }
-.FooterContainer div:last-child {
+.third {
   width: 20%;
   height: 100%;
+  background-color: red;
 }
 .FooterContainer div .title {
   font-size: 25px;
   font-weight: bold;
+}
+.relatedLinks {
+  display: flex;
+  flex-direction: column;
+  margin-top: 0.5vw;
+  font-weight: 500;
+  font-size: 1.1vw;
+}
+.relatedLinks span:first-child {
+  margin-bottom: 0.75vw;
 }
