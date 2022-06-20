@@ -12,19 +12,20 @@ const TopMenu = () => {
   );
   return (
     <div className={classes.container}>
-      <span className={classes.logo}>RandN</span>
+      <Link to={{ pathname: "/" }}>
+        <span className={classes.logo}>RandN</span>
+      </Link>
       <Link to={{ pathname: "/" }} className={classes.home}>
         Home
       </Link>
-      <Dropdown overlay={menu} trigger={["click"]}>
+      <Dropdown overlay={menu} trigger={["hover"]}>
         <a className="ant-dropdown-link" onClick={(e) => e.preventDefault()}>
-          <span>Random Objects</span>
+          <span className={classes.DropdownText}>Random Objects</span>
         </a>
       </Dropdown>
       <Link to={{ pathname: "/quota" }} className={classes.quota}>
         Quota
       </Link>
-      ssalam
     </div>
   );
 };
