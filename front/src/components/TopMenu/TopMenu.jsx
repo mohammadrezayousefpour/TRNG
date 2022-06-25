@@ -6,8 +6,19 @@ import "antd/dist/antd.css";
 
 const TopMenu = () => {
   const menu = (
-    <Menu>
-      <Menu.Item>salam</Menu.Item>
+    <Menu className={classes.menu}>
+      <Link to={{ pathname: "/raw_bytes" }}>
+        <Menu.Item className={classes.Item}>Raw Bytes</Menu.Item>
+      </Link>
+      <Link to={{ pathname: "/integers" }}>
+        <Menu.Item className={classes.Item}>Integers</Menu.Item>
+      </Link>
+      <Link to={{ pathname: "/rnd_str" }}>
+        <Menu.Item className={classes.Item}>Random String/Password</Menu.Item>
+      </Link>
+      <Link to={{ pathname: "/uniform_dist" }}>
+        <Menu.Item className={classes.Item}>Uniform Distribution</Menu.Item>
+      </Link>
     </Menu>
   );
   return (
