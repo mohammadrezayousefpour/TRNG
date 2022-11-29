@@ -1,0 +1,106 @@
+.container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  margin-top: 2vw;
+}
+.child {
+  width: 50%;
+  margin-top: 1vw;
+  display: flex;
+  align-items: center;
+  /* background-color: rebeccapurple; */
+  height: 10vh;
+}
+.child span {
+  font-size: 15px;
+  margin-right: 2vw;
+  font-weight: bold;
+}
+.generate {
+  width: 200px;
+  height: 50px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* padding: 20px 50px; */
+  background-color: #1c78f2;
+  color: white;
+  font-size: 1.2vw;
+  font-weight: 500;
+  margin-top: 4vw;
+  cursor: pointer;
+  border-radius: 25px;
+}
+
+.showModal {
+  width: 30.965vw !important;
+  height: 30.647vw;
+  padding: 10px 10px 10px 10px;
+  direction: rtl !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 14px;
+  box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.16);
+  background-color: #fff;
+
+  margin-top: -6vw;
+  font-family: iranyekanFarsi;
+}
+.showModal :global(.ant-modal-content) {
+  height: 100%;
+  width: 100%;
+  /* background-color: rebeccapurple; */
+  direction: rtl;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: right;
+  box-shadow: none;
+  padding-left: 50px;
+  padding-top: 40px;
+}
+.showModal :global(.ant-modal-body) {
+  padding: 0vw !important;
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  font-family: iranyekan;
+  /* background-color: red; */
+}
+.footer {
+  font-weight: 500;
+  font-size: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.close {
+  width: 20%;
+  flex-grow: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 25px;
+  padding: 10px;
+  background-color: #c4c4c4;
+  font-weight: bold;
+}
+.dowmload {
+  width: 20%;
+  flex-grow: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 25px;
+  padding: 10px 40px;
+  margin-right: 10%;
+  color: wheat;
+  background-color: #1c78f2;
+  font-weight: bold;
+}

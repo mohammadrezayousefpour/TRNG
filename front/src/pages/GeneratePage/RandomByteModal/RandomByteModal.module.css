@@ -1,0 +1,63 @@
+.container {
+  width: 40.965vw !important;
+  height: 40.647vw;
+  padding: 10px 10px 10px 10px;
+  direction: rtl !important;
+  display: flex;
+  justify-content: flex-start;
+  border-radius: 14px;
+  box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.16);
+  background-color: #fff;
+
+  margin-top: -6vw;
+  font-family: iranyekanFarsi;
+}
+.container :global(.ant-modal-content) {
+  height: 100%;
+  width: 100%;
+  /* background-color: rebeccapurple; */
+  direction: rtl;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  text-align: right;
+  box-shadow: none;
+  padding: 0px !important;
+}
+.container :global(.ant-modal-body) {
+  padding: 0vw !important;
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  font-family: iranyekan;
+  /* background-color: red; */
+}
+.ShowingBody {
+  margin: auto;
+  width: 98%;
+  height: 90%;
+  border: 1px solid #f6f6f6;
+  border-radius: 25px;
+  display: flex;
+  justify-content: left;
+  flex-direction: column;
+  padding: 1vw;
+  text-align: left;
+  overflow-y: scroll;
+
+  /* overflow-y: scroll; */
+}
+.footer {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  justify-content: space-evenly;
+  /* background-color: red; */
+}
+.Button {
+  width: 5vw;
+  height: 3vw;
+  border-radius: 25px;
+  color: white;
+  background-color: #1c78f2;
+}

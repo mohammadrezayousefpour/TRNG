@@ -19,6 +19,9 @@ const TopMenu = () => {
       <Link to={{ pathname: "/uniform_dist" }}>
         <Menu.Item className={classes.Item}>Uniform Distribution</Menu.Item>
       </Link>
+      <Link to={{ pathname: "/qr_code" }}>
+        <Menu.Item className={classes.Item}>QrCode</Menu.Item>
+      </Link>
     </Menu>
   );
   return (

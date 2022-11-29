@@ -1,19 +1,37 @@
 import { InputNumber, Radio } from "antd";
 import React from "react";
+import { useEffect } from "react";
 import { useState } from "react";
 import classes from "./Integer.module.css";
 
-const Integer = () => {
+const Integer = ({ ModalVisible, setModalVisible, setAnswers }) => {
   const [numOfBytes, setNumOfBytes] = useState(1);
   const [numOfCol, setNumOfCol] = useState(1);
+  const [selectedType, setSelectedType] = useState();
   const types = [
-    "INT16 (unsigned)",
-    "INT16 (signed)",
-    "INT32 (unsigned)",
-    "INT32 (signed)",
-    "INT64 (unsigned)",
-    "INT64 (signed)",
+    { text: "INT16 (unsigned)", value: "160" },
+    { text: "INT16 (signed)", value: "161" },
+    { text: "INT32 (unsigned)", value: "320" },
+    { text: "INT32 (signed)", value: "321" },
+    { text: "INT64 (unsigned)", value: "640" },
+    { text: "INT64 (signed)", value: "641" },
   ];
+  const callApiAndShowNumbers = () => {
+    setModalVisible(true);
+    fetch(
+      `http://127.0.0.1:8000/random_numbers/random_number/?type=integers&number=${numOfBytes}&model=${selectedType}`
+    )
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data.data);
+        setAnswers(data.data);
+      })
+      .catch((err) => console.log(err));
+  };
+
+  useEffect(() => {
+    console.log(selectedType);
+  }, [selectedType]);
   return (
     <div className={classes.container}>
       <div className={classes.child}>
@@ -41,13 +59,19 @@ const Integer = () => {
       <div className={classes.radio}>
         <Radio.Group className={classes.radio}>
           {types.map((type, index) => (
-            <Radio value={index} style={{ fontSize: "1.2vw" }}>
-              {type}
+            <Radio
+              value={index}
+              style={{ fontSize: "1.2vw" }}
+              onChange={(e) => setSelectedType(types[e.target.value].value)}
+            >
+              {type.text}
             </Radio>
           ))}
         </Radio.Group>
       </div>
-      <div className={classes.generate}>Generate</div>
+      <div className={classes.generate} onClick={callApiAndShowNumbers}>
+        Generate
+      </div>
     </div>
   );
 };

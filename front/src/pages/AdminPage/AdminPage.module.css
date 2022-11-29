@@ -1,0 +1,67 @@
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.body {
+  width: 90%;
+  height: 90vh;
+  background-color: white;
+  border: 1px solid #f3f3f3;
+  border-radius: 25px;
+  box-shadow: 0 3px 6px 0 rgba(173, 173, 173, 0.12);
+  margin: 10vh auto;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  padding: 10px 20px;
+}
+
+.wrapper {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to top, #6441a5 0%, #2a0845 100%);
+}
+.Enter {
+  width: 30vw;
+  height: 30vw;
+  border-radius: 25px;
+  border: 1px solid #575353;
+  padding: 30px 20px 20px 20px;
+  text-align: right;
+  background-color: white;
+}
+.lable {
+  margin: 1vw 0vw;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.InputContainer {
+  width: 100%;
+  height: 7vh;
+  margin-top: 1vw;
+  border-radius: 10px;
+}
+.Button {
+  width: 40%;
+  height: 4vw;
+  background-color: #1c78f2;
+  margin: 3vw auto 0vw auto;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 17px;
+  cursor: pointer;
+}
+.text {
+  color: red;
+
+  text-align: center;
+  margin-top: 1vw;
+}

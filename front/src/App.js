@@ -4,8 +4,25 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import Home from "./pages/Home/Home";
 import FAQs from "./pages/FAQs/FAQs";
 import GeneratePage from "./pages/GeneratePage/GeneratePage";
+import AdminPage from "./pages/AdminPage/AdminPage";
+import { useEffect, useState } from "react";
+import QuotaPage from "./pages/quota/QuotaPage";
 
 function App() {
+  const [userIp, setUserIp] = useState();
+  useEffect(() => {}, []);
+
+  useEffect(() => {
+    fetch("http://127.0.0.1:8000/random_numbers/ip/", {
+      headers: {
+        "Content-type": "application/json",
+      },
+      method: "POST",
+    })
+      .then((response) => response.json())
+      .then((data) => console.log(data));
+  }, []);
+
   const raw_bytes_Object = {
     title: "Random Byte Generator",
     text: "This form can be used to generate random bytes. The randomness behind the scene comes from a true random number generator (TRNG).",
@@ -45,9 +62,15 @@ function App() {
             }
           />
           <Route
+            path="/qr_code"
+            element={<GeneratePage type="qrcode" property={""} />}
+          />
+          <Route
             path="/rnd_str"
             element={<GeneratePage type="rnd_str" property={string_object} />}
           />
+          <Route path="/admin-page" element={<AdminPage />} />
+          <Route path="/quota" element={<QuotaPage />} />
         </Routes>
       </Router>
     </div>

@@ -25,6 +25,8 @@
 }
 .properties {
   margin-top: 2vw;
+  display: flex;
+  flex-direction: column;
 }
 .text {
   margin-left: 1vw;
